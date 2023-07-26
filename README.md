@@ -23,18 +23,18 @@ To run this project, you will need to add the following environment variables to
 
 
 ## To test authentication
-I am using the library bcrypt for encrypt password.
+I am using the library bcrypt to encrypt password.
 
 To test the authentication with the database use this password:
 "$2b$10$WDL.DzJlnJKRvYlcDrEqt.yOuyMpzmgJyqTCUY1o/itjy.EvfZuQO" 
 
-and send it this "123456" for return true otherwise it will return false
+and send it this "123456" to return true otherwise, it will return false
 
 
 Request type POST:
 ```javascript
 {
-  "user": "userNeme",
+  "user": "userName",
   "password": "123456"
 }
 ```
