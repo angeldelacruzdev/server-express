@@ -21,4 +21,10 @@ export class AuthController extends AuthModel {
 	comparePassword(currentPassword: string, password: string) {
 		return bcrypt.compareSync(currentPassword, password);
 	}
+
+	//TODO Hash the password
+	async encryptPassword(password: string) {
+		const saltRounds = 10; // The cost factor for bcrypt (higher is more secure but slower)
+		return await bcrypt.hash(password, saltRounds);
+	}
 }

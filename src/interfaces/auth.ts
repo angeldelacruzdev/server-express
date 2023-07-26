@@ -6,7 +6,7 @@ interface Auth {
 }
 
 interface SessionValue extends SessionData {
-	user?: UserData | null;
+	user?: UserData;
 }
 interface SessionUser {
 	userName: string;
