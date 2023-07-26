@@ -2,6 +2,7 @@
 
 This server was created in Express with a typescript and authentication module.
 
+<<<<<<< HEAD
 ## config database
 
 Go to the path 'src\config\envAccess.js' and add your database credentials
@@ -45,6 +46,18 @@ Go to the path 'src\middleware\auth.ts' and uncomment lines 13 to 17 to work in 
 
 ## npm run dev
 
+=======
+# npm Install' 
+To install the dependencies
+
+# config database
+Go to the path 'src\config\envAccess.js' and add your database credentials 
+
+# to work validating the session in development mode
+Go to the path 'src\middleware\auth.ts' and uncomment lines 13 to 17 to work in development mode and not lose the session for each request with tools like RapidAPI
+
+# `npm run dev`
+>>>>>>> 6454125e40eac798a89006c39233f1f7ab9f929e
 Runs the app in the development mode.\
 Open http://localhost:3030/home to view it in the browser.
 it in the browser.
