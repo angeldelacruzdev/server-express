@@ -1,5 +1,5 @@
 # server-express
-This server is created in Express with the authentication module created
+This server was created in Express with a typescript and authentication module.
 
 ##config database
 Go to the path 'src\config\envAccess.js' and add your database credentials 
