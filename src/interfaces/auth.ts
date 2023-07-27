@@ -1,29 +1,18 @@
 import { SessionData } from "express-session";
+import { UserData, UserSession } from "./user";
 
 interface Auth {
-	userName: string;
-	password: string;
+  userName: string;
+  password: string;
 }
 
-interface SessionValue extends SessionData {
-	user?: UserData;
-}
-interface SessionUser {
-	userName: string;
-	userId: number;
-	companyId: number;
-}
-
-interface UserData {
-	userId: number;
-	userName: string;
-	pass?: string;
-	companyId: number;
+interface AuthValue extends SessionData {
+  user?: UserData;
 }
 
 export interface InterfaceAuth {
-	Auth: Auth;
-	SessionValue: SessionValue;
-	SessionUser: SessionUser;
-	UserData: UserData;
+  Auth: Auth;
+  SessionValue: AuthValue;
+  SessionUser: UserSession;
+  UserData: UserData;
 }
