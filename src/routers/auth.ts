@@ -15,8 +15,13 @@ export class AuthRouter {
 	}
 
 	async #getAuth(req: Request, res: Response) {
-		const { user, password } = req.body;
 		try {
+			//*check if parameters are correct
+			if (Object.keys(req.body).length === 0) {
+				throw new Error("Error receiving parameters");
+			}
+
+			const { user, password } = req.body;
 			const authController = new AuthController();
 			const result = await authController.getAuth({
 				userName: user,
@@ -30,7 +35,7 @@ export class AuthRouter {
 					userId: result.userId,
 					companyId: result.companyId,
 				};
-				res.status(202).json(sessionData.user);
+				res.status(200).json(sessionData.user);
 			}
 		} catch (error) {
 			res.status(401).json("Unauthorized");
