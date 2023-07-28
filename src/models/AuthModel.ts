@@ -1,5 +1,5 @@
 import { ExecutionQuery } from "../helpers/query";
-import { InterfaceAuth } from "../interfaces/auth";
+import { InterfaceUser } from "../interfaces/user";
 import { AuthQuery } from "../sql/auth";
 
 export class AuthModel extends AuthQuery {
@@ -12,7 +12,7 @@ export class AuthModel extends AuthQuery {
 	async getUser(userName: string) {
 		const result = (await this.#setQuery.select(
 			this.sqlGetUser(userName)
-		)) as InterfaceAuth["UserData"][];
+		)) as InterfaceUser["User"][];
 
 		if (result.length === 0) throw new Error("Error with query result");
 
